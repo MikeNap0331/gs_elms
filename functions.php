@@ -282,21 +282,6 @@ function gs_add_typekit () {
 }
 add_action('wp_head', 'gs_add_typekit');
 
-function new_cta () {
-  ?>
-  <script>
-  //jQuery(document).ready( function () {
-    jQuery("#menu-item-9764").replaceWith('<li id="menu-item-9764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9764"><a id="interested-in-applying" href="http://www.elms.edu/interested-in-applying/" style="">Apply</a><a id="link-give" href="http://www.elms.edu/alumni/support-elms/make-a-gift/" style="">Give</a></li>');
-    
-    //});
-  </script>
-  <?php
-}
-add_action('wp_footer', 'new_cta');
-
-
-
-
 function render_homepage_event ($event) {
   ?> 
   <div class="event">
@@ -359,7 +344,7 @@ function gs_is_active_sidebar () {
 }
 
 function rss_link ($query) {
-  return '<a href="'.'/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank">Rss</a>';
+  return '<a href="/feed/?'.http_build_query($query->query).'" class="rss-link" target="_blank" aria-label="RSS link"><i class="fas fa-rss" aria-hidden="true"></i></a>';
 }
 
 
@@ -395,7 +380,7 @@ function get_todays_library_hours () {
 
 function inject_fontawesome() {
     ?>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <?php
 }
 add_action('wp_footer', 'inject_fontawesome');
@@ -483,19 +468,6 @@ add_filter( 'body_class', function( $classes ) {
     
 } );
 
-
-if (is_admin()) {
-
-    // The path to the configuation is rather long, so let's
-    // make us a shorthand.
-    //class_alias('\GlobalMetaBoxOrder\Config', 'MetaBoxConfig');
-
-    // Add MetaBoxConfig below this line
-    //MetaBoxConfig::$getBlueprintUserId = function () { return 2; };
-
-}
-
-
 add_action("ga_dash_addtrackingcode", "add_optimize_require");
 function add_optimize_require () {
   echo "ga('require', 'GTM-T3ZX2GB');";
@@ -525,7 +497,7 @@ function specific_no_wpautop($content) {
 }
 
 function excerpt_readmore($more) {
-return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'read more' . '</a>';
+return '... <a href="'. get_permalink($post->ID) . '" class="readmore">read more</a>';
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 

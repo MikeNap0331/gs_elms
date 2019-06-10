@@ -1585,16 +1585,6 @@ p:last-child{
 		padding:32px 0;
 	}
 }
-.parent-sidebar-menu, .field-sidebar_calls_to_action{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
-.parent-sidebar-menu ul, .field-sidebar_calls_to_action ul{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
 .field-sidebar-image{
 	display:block;
 	margin-bottom:32px;
@@ -1722,26 +1712,6 @@ p:last-child{
 }
 .field-related-events.toggled a.show-less{
 	display:block;
-}
-.field-sidebar_calls_to_action{
-	margin-top:16px;
-}
-.field-sidebar_calls_to_action .menu-item{
-	margin-bottom:16px;
-}
-.field-sidebar_calls_to_action .menu-item .permalink{
-	display:block;
-	padding:16px;
-	width:100%;
-	text-align:center;
-	text-transform:uppercase;
-	font-size:18px;
-	font-weight:500;
-	color:white;
-	background-color:#c3a250
-}
-.field-sidebar_calls_to_action .menu-item .permalink:hover{
-	background-color:#a78c45;
 }
 .parent-sidebar-menu{
 	padding:0;
@@ -3751,7 +3721,7 @@ a.buttonLink.grouped{
 	margin-bottom:16px;
 }
 #secondary #formTrigger:hover,#secondary a.buttonLink:hover,aside .jotform-trigger:hover{
-	background-color:#c3a250 !important;
+	background-color:#a78c45 !important;
 	color:#fff !important;
 }
 #secondary #target-formTrigger{

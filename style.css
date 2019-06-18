@@ -3839,7 +3839,7 @@ a.buttonLink.grouped{
 }
 .social-media .social-media-icons a.social-media-icon-link:hover {
 	border: 2px solid #c3a250;
-	webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 body.page-template-landing-page .opening-menu{
 	border-top:none;

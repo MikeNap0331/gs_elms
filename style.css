@@ -4129,8 +4129,6 @@ th .smallText{
 	margin:auto;
 }
 img[src="https://external.niche.com/rankings-badges/niche-best-colleges-badge-white-2019.png"]:hover{
-	-webkit-transform:
-		scale(1.1);
-	transform:
-		scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform:scale(1.1);
 }
